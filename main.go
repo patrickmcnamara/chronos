@@ -1,8 +1,9 @@
 package main
 
 import (
-	"chronos/chronos"
 	"fmt"
+
+	"github.com/patrickmcnamara/chronos/chronos"
 )
 
 func main() {
