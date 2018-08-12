@@ -1,6 +1,9 @@
 # Chronos
 
-Chronos is a time system that splits the day into 16 * 16 * 16 * 16 parts instead of the usual 24 * 60 * 60. It displays this time using four hexadecimal digits. For example, 0000 is the start of the day, 8000 is half way through the day and FFFF is the last part of the day.
+Chronos is a time system that splits the day into 16 * 16 * 16 * 16 parts
+instead of the usual 24 * 60 * 60. It displays this time using four hexadecimal
+digits. For example, 0000 is the start of the day, 8000 is half way through the
+day and FFFF is the last part of the day.
 
 ## Installation
 
@@ -9,3 +12,7 @@ Run `go get -u github.com/patrickmcnamara/chronos/cmd/chronos`.
 ## Usage
 
 Run `chronos` after installing.
+
+---
+
+This package is dumb and you should ignore it.

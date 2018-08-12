@@ -1,3 +1,11 @@
+/*
+Package chronos provides utilities for working with the chronos time system.
+
+The chronos time system splits the day into 16 * 16 * 16 * 16 parts instead of
+the usual 24 * 60 * 60. It displays this time using four hexadecimal digits. For
+example, 0000 is the start of the day, 8000 is half way through the day and FFFF
+is the last part of the day.
+*/
 package chronos
 
 import (
@@ -17,6 +25,7 @@ const (
 	// MinChronos is the minimum value of a chronos.
 	MinChronos Chronos = 0
 
+	// maxNano is the maximum number of nanoseconds in a day.
 	maxNano uint64 = 24 * 60 * 60 * 1000000000
 )
 
