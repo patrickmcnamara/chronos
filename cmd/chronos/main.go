@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/patrickmcnamara/chronos/chronos"
+	"github.com/patrickmcnamara/chronos"
 )
 
 func main() {
