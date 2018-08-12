@@ -15,7 +15,7 @@ const (
 	// MaxChronos is the maximum value of a chronos.
 	MaxChronos Chronos = 4294967296
 	// MinChronos is the minimum value of a chronos.
-	MinChronos Chronos = 1
+	MinChronos Chronos = 0
 
 	maxNano uint64 = 24 * 60 * 60 * 1000000000
 )
