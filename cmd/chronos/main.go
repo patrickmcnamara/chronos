@@ -1,3 +1,5 @@
+// Chronos tells the current chronos time.
+//
 package main
 
 import (
