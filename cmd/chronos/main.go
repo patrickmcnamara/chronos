@@ -1,5 +1,3 @@
-// Chronos tells the current chronos time.
-//
 package main
 
 import (
@@ -9,6 +7,5 @@ import (
 )
 
 func main() {
-	now := chronos.Now()
-	fmt.Println(now)
+	fmt.Println(chronos.Now())
 }
