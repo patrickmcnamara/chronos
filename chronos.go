@@ -73,3 +73,13 @@ func Parse(s string) (c Chronos, err error) {
 func (c Chronos) String() string {
 	return fmt.Sprintf("%04X", uint16(c))
 }
+
+// Add returns the Chronos c+d. It loops over days.
+func (c Chronos) Add(d Chronos) Chronos {
+	return c + d
+}
+
+// Sub returns the Chronos c-d. It loops over days.
+func (c Chronos) Sub(d Chronos) Chronos {
+	return c - d
+}
