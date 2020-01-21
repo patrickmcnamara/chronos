@@ -57,8 +57,8 @@ func Parse(s string) (c Chronos, err error) {
 	if precision > 4 {
 		precision = 4
 	}
-	moments, _ := strconv.ParseUint(fmt.Sprintf("%04s", s[:precision]), 16, 16)
-	return Chronos(moments), nil
+	moments, err := strconv.ParseUint(fmt.Sprintf("%04s", s[:precision]), 16, 16)
+	return Chronos(moments), err
 }
 
 // String returns the standard precision chronos string.
