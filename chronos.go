@@ -45,10 +45,11 @@ func FromDuration(d time.Duration) Chronos {
 	return Chronos(moments)
 }
 
-// ToTime creates a time.Time from a Chronos. The date will always be the first
-// day, `0001-01-01`. The timezone will be UTC.
+// ToTime creates a time.Time from a Chronos set to today's date. The timezone
+// will be UTC.
 func (c Chronos) ToTime() time.Time {
-	return time.Date(1, time.January, 1, 0, 0, 0, int(c)*(int(maxNano)/int(MaxChronos)), time.UTC)
+	now := time.Now().UTC()
+	return time.Date(now.Year(), now.Month(), now.Day(), 0, 0, 0, int(c)*(int(maxNano)/int(MaxChronos)), time.UTC)
 }
 
 // ToDuration creates a time.Duration from a Chronos. Loops over days.
