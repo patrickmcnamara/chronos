@@ -45,6 +45,12 @@ func FromDuration(d time.Duration) Chronos {
 	return Chronos(moments)
 }
 
+// ToTime creates a time.Time from a chronos. The date will always be the first
+// day, `0001-01-01`. The timezone will be UTC.
+func (c Chronos) ToTime() time.Time {
+	return time.Date(1, time.January, 1, 0, 0, 0, int(c)*(int(maxNano)/int(MaxChronos)), time.UTC)
+}
+
 // ToDuration creates a time.Duration from a chronos. Loops over days.
 func (c Chronos) ToDuration() time.Duration {
 	nanoseconds := int64(c) * (maxNano / int64(MaxChronos))
