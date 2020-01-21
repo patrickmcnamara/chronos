@@ -34,8 +34,8 @@ func Now() Chronos {
 // FromTime returns a chronos from a time.Time. It ignores the day or date.
 func FromTime(t time.Time) Chronos {
 	midnight := t.UTC().Truncate(24 * time.Hour)
-	nanoseconds := time.Since(midnight).Nanoseconds()
-	moments := (nanoseconds * int64(MaxChronos)) / maxNano
+	nanoseconds := t.Sub(midnight).Nanoseconds()
+	moments := (nanoseconds * (int64(MaxChronos) + 1)) / maxNano
 	return Chronos(moments)
 }
 
